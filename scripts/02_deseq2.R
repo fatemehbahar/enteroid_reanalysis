@@ -44,7 +44,7 @@ record("PC1+PC2_percent", round(pct[1] + pct[2], 1), 82.9, 0.2)
 record("J1009_distance_to_centroid", round(pca$dist_to_centroid[pca$sample == "J1009"], 1), 32.4, 0.3)
 
 # ---- selected genes (Table 3)
-sel_genes <- c("PYGL", "CLDN2", "FABP6", "CXCL8", "NFKBIA", "IL1B", "TNF", "RELB")
+sel_genes <- c("PYGL", "CLDN2", "FABP6", "CXCL8", "NFKBIA", "IL1B", "TNF", "RELB", "SLC2A5", "SLC26A3")
 t3 <- res[res$symbol %in% sel_genes, c("symbol", "ensembl", "baseMean", "log2FoldChange", "padj", "rank_padj", "sig")]
 t3 <- t3[order(match(t3$symbol, sel_genes)), ]
 print(t3)
